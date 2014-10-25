@@ -148,11 +148,7 @@ while t < tout:
 f = open('output.txt', 'w')
 
 for i in range(N):
-    if h[i] <= 1e-10:
-        u = 0.0
-    else:
-        u = q[i]/h[i]
-    print >> f, '%.6f %.6f %.6f' % (x_ori + i*dx, h[i], u)
+    print >> f, '%.6f %.6f %.6f' % (x_ori + i*dx, h[i], q[i])
 
 f.close()
 
